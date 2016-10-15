@@ -22,8 +22,15 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
-  database: saas-project-app_development
+  #<<: *default
+  #database: saas-project-app_development
+  adapter: postgresql
+  encoding: unicode
+  database: saas-project-app
+  pool: 5
+  username: rails_user
+  password:
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
