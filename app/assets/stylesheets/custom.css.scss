@@ -119,3 +119,12 @@
   padding-right: 0 !important;
 }
 
+.table tr td {
+  a.mailn-link {
+    color: #428bca;
+  }
+  a.mailn-link:hover {
+    background: none;
+  }
+}
+
