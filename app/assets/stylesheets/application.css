@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_devise_bootstrap_views
+ *= require_bootstrap-datapicker3
  *= require_tree .
  *= require_self
  */
