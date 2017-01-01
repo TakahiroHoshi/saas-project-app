@@ -11,6 +11,7 @@ gem 'milia'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
+gem 'aws-sdk'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
