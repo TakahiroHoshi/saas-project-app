@@ -7,7 +7,7 @@ class Payment < ActiveRecord::Base
   end
 
   def self.year_options
-    (Date.today.year..(Date.today.year+10))to_a
+    (Date.today.year..(Date.today.year+10)).to_a
   end
 
   def process_payment
