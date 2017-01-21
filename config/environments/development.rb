@@ -1,5 +1,15 @@
 Rails.application.configure do
    
+  AWS_ACCESS_KEY_ID = Rails.application.secrets.AWS_ACCESS_KEY_ID
+  AWS_REGION = Rails.application.secrets.AWS_REGION
+  AWS_SECRET_ACCESS_KEY = Rails.application.secrets.AWS_SECRET_ACCESS_KEY
+  S3_BUCKET = Rails.application.secrets.S3_BUCKET
+  SENDGRID_PASSWORD = Rails.application.secrets.SENDGRID_PASSWORD
+  SENDGRID_USERNAME = Rails.application.secrets.SENDGRID_USERNAME
+  STRIPE_TEST_PUBLISHABLE_KEY = Rails.application.secrets.STRIPE_TEST_PUBLISHABLE_KEY
+  STRIPE_TEST_SECRET_KEY = Rails.application.secrets.STRIPE_TEST_SECRET_KEY
+
+
   # devise says to define default url
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
