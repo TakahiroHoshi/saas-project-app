@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :tenant
   has_many :artifacts, dependent: :destroy
+  has_many :user_projects
   has_many :users, through: :user_projects
   validates_uniqueness_of :title
   validate :free_plan_can_only_have_one_project
@@ -32,7 +33,7 @@ class Project < ActiveRecord::Base
       if user.is_admin?
         tenant.projects.order(:id).limit(1)
       else
-        uer.projects.where(tenant_id: tenant.id).order(:id).limit(1)
+        user.projects.where(tenant_id: tenant.id).order(:id).limit(1)
       end
     end
   end
